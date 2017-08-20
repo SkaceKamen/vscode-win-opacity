@@ -23,4 +23,4 @@ npm install
 npm run rebuild
 ```
 
-this rebuilds native modules to be used in electron based appliactions.
+This rebuilds native modules to be used in electron based applications.
