@@ -4,6 +4,8 @@
 
 Changes opacity of all Code windows to predefined value
 
+![Screenshot](images/screen-1.png)
+
 ## Requirements
 
  * Windows 2000 or newer
