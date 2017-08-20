@@ -26,3 +26,7 @@ npm run rebuild
 ```
 
 This rebuilds native modules to be used in electron based applications.
+
+## Credits
+
+`drywolf` - part of code used to find vscode windows, https://github.com/drywolf/code-solution-manager/blob/0.0.1/extension-ui/browser.js

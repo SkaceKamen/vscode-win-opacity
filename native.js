@@ -1,5 +1,8 @@
 /**
  * Navite call all in one file, in C style
+ *
+ * Some parts were taken from:
+ * @source https://github.com/drywolf/code-solution-manager/blob/0.0.1/extension-ui/browser.js
  */
 
 const ref = require('ref')
