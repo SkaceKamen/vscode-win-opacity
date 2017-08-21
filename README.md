@@ -1,5 +1,3 @@
-# win-opacity
-
 ## Features
 
 Changes opacity of all Code windows to predefined value
