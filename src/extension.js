@@ -42,10 +42,5 @@ function activate () {
   })
 }
 
-function deactivate () {
-  // Reset opacity when deactivating
-  changeOpacity(255)
-}
-
 exports.activate = activate;
 exports.deactivate = deactivate;
