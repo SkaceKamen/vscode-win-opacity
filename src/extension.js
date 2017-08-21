@@ -43,4 +43,4 @@ function activate () {
 }
 
 exports.activate = activate;
-exports.deactivate = deactivate;
+exports.deactivate = function () {};
