@@ -2,7 +2,7 @@
   "name": "win-opacity",
   "displayName": "Windows opacity",
   "description": "Changes opacity of Code windows on Windows using Windows API",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "publisher": "skacekachna",
   "author": "Jan Zípek",
   "icon": "images/icon.png",
