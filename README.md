@@ -6,7 +6,7 @@ Changes opacity of all Code windows to predefined value
 
 ## Requirements
 
- * **64bit version of visual studio code**
+ * **64bit version of Visual Studio Code**
  * Windows 2000 or newer
 
 ## Extension Settings
