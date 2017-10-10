@@ -6,6 +6,7 @@ Changes opacity of all Code windows to predefined value
 
 ## Requirements
 
+ * Only 64bit version right now
  * Windows 2000 or newer
 
 ## Extension Settings
