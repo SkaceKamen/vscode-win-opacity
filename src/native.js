@@ -16,6 +16,7 @@ const WS_EX_LAYERED = 0x80000;
 const LWA_ALPHA = 0x2;
 
 const VSCODE_WINDOW_SUFFIX = ' Visual Studio Code';
+const VSCODE_INSIDERS_WINDOW_SUFFIX = ' Visual Studio Code - Insiders';
 
 // Load all user32 functions we need
 // Note: The A suffix indicates we're using ASCII for texts
@@ -47,7 +48,7 @@ var windowProc = ffi.Callback('bool', ['long', 'int32'], function (hwnd) {
 	var window_name = ref.readCString(buf, 0)
 
 	// Check if it's visual studio window
-	if (!window_name || !window_name.length || !endsWith(window_name, VSCODE_WINDOW_SUFFIX)) {
+	if (!window_name || !window_name.length || !(endsWith(window_name, VSCODE_WINDOW_SUFFIX) || endsWith(window_name, VSCODE_INSIDERS_WINDOW_SUFFIX))) {
 			return true
 	}
 
