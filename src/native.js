@@ -15,8 +15,7 @@ const GWL_EXSTYLE = -20;
 const WS_EX_LAYERED = 0x80000;
 const LWA_ALPHA = 0x2;
 
-const VSCODE_WINDOW_SUFFIX = ' Visual Studio Code';
-const VSCODE_INSIDERS_WINDOW_SUFFIX = ' Visual Studio Code - Insiders';
+const VSCODE_WINDOW_CHECK = / Visual Studio Code(?: - Insiders)?(?:\[.*\])?/;
 
 // Load all user32 functions we need
 // Note: The A suffix indicates we're using ASCII for texts
@@ -28,16 +27,6 @@ var user32 = ffi.Library('user32', {
 	SetLayeredWindowAttributes: ['bool', ['long', 'uint32', 'byte', 'uint32']]
 })
 
-/**
- * Checks if input string ends with specified suffix
- * @param {string} input
- * @param {string} suffix
- * @return {boolean} does input ends with suffix
- */
-function endsWith (str, suffix) {
-	return str.indexOf(suffix, str.length - suffix.length) !== -1;
-}
-
 // Context variable used to keep track of windows found in callback
 var windows = [];
 // This callback is called when searching throught all windows
@@ -48,7 +37,10 @@ var windowProc = ffi.Callback('bool', ['long', 'int32'], function (hwnd) {
 	var window_name = ref.readCString(buf, 0)
 
 	// Check if it's visual studio window
-	if (!window_name || !window_name.length || !(endsWith(window_name, VSCODE_WINDOW_SUFFIX) || endsWith(window_name, VSCODE_INSIDERS_WINDOW_SUFFIX))) {
+	if (!window_name
+		|| !window_name.length
+		|| !VSCODE_WINDOW_CHECK.test(window_name)
+	) {
 			return true
 	}
 
