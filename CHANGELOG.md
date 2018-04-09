@@ -9,9 +9,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
  - Fixed support for insiders windows
  - Fixed support for windows launched as admin
 
+## [1.0.5] - 2018-03-04
+### Fixed
+ - Fixed support for insiders windows
+ - Fixed support for windows launched as admin
+
 ## [1.0.4] - 2017-09-09
 ### Fixed
- - Fixed compability issue with new VSCode version
+ - Fixed compatibility issue with new VSCode version
 
 ## [1.0.3] - 2017-08-20
 ### Fixed
