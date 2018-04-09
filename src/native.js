@@ -15,7 +15,7 @@ const GWL_EXSTYLE = -20;
 const WS_EX_LAYERED = 0x80000;
 const LWA_ALPHA = 0x2;
 
-const VSCODE_WINDOW_CHECK = / Visual Studio Code(?: - Insiders)?(?:\[.*\])?/;
+const VSCODE_WINDOW_CHECK = / - Visual Studio Code(?: - Insiders)?(?: \[.*\])?$/;
 
 // Load all user32 functions we need
 // Note: The A suffix indicates we're using ASCII for texts
