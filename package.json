@@ -2,12 +2,12 @@
   "name": "win-opacity",
   "displayName": "Windows opacity",
   "description": "Changes opacity of Code windows on Windows using Windows API",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "publisher": "skacekachna",
   "author": "Jan Zípek",
   "icon": "images/icon.png",
   "engines": {
-    "vscode": "^1.15.0"
+    "vscode": "^1.40.0"
   },
   "repository": {
     "type": "git",
@@ -37,19 +37,19 @@
   },
   "scripts": {
     "postinstall": "node ./node_modules/vscode/bin/install",
-    "rebuild": "npm rebuild --runtime=electron --target=4.2.5 --disturl=https://atom.io/download/electron",
+    "rebuild": "npm rebuild --runtime=electron --target=6.1.2 --disturl=https://atom.io/download/electron",
     "package": "vsce package && node build/package.js",
     "publish": "vsce publish"
   },
   "devDependencies": {
     "@types/node": "^6.0.40",
+    "@types/vscode": "^1.40.0",
     "eslint": "^3.6.0",
-    "glob-fs": "^0.1.7",
-    "vscode": "^1.1.35"
+    "glob-fs": "^0.1.7"
   },
   "dependencies": {
-    "ffi": "github:torycl/node-ffi#a6da649e9036511a817b3557aa9e92e152943839",
-    "ref": "^1.3.4"
+    "ffi": "github:lxe/node-ffi#node-12",
+    "ref": "github:lxe/ref#node-12"
   },
   "license": "MIT"
 }
