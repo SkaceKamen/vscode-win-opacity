@@ -37,14 +37,14 @@
   },
   "scripts": {
     "postinstall": "node ./node_modules/vscode/bin/install",
-    "rebuild": "npm rebuild --runtime=electron --target=6.1.2 --disturl=https://atom.io/download/electron",
+    "rebuild": "npm rebuild --runtime=electron --target=7.1.11 --disturl=https://atom.io/download/electron",
     "package": "vsce package && node build/package.js",
     "publish": "vsce publish"
   },
   "devDependencies": {
     "@types/node": "^6.0.40",
     "@types/vscode": "^1.40.0",
-    "eslint": "^3.6.0",
+    "eslint": "^6.6.0",
     "glob-fs": "^0.1.7"
   },
   "dependencies": {
