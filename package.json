@@ -2,7 +2,7 @@
   "name": "win-opacity",
   "displayName": "Windows opacity",
   "description": "Changes opacity of Code windows on Windows using Windows API",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "publisher": "skacekachna",
   "author": "Jan Zípek",
   "icon": "images/icon.png",
@@ -49,7 +49,8 @@
   },
   "dependencies": {
     "ffi": "github:lxe/node-ffi#node-12",
-    "ref": "github:lxe/ref#node-12"
+    "ref": "github:lxe/ref#node-12",
+    "vscode": "^1.1.37"
   },
   "license": "MIT"
 }
