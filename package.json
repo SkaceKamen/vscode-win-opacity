@@ -45,12 +45,12 @@
     "@types/node": "^6.0.40",
     "@types/vscode": "^1.40.0",
     "eslint": "^6.6.0",
-    "glob-fs": "^0.1.7"
+    "glob-fs": "^0.1.7",
+    "vscode": "^1.1.37"
   },
   "dependencies": {
     "ffi": "github:lxe/node-ffi#node-12",
-    "ref": "github:lxe/ref#node-12",
-    "vscode": "^1.1.37"
+    "ref": "github:lxe/ref#node-12"
   },
   "license": "MIT"
 }
