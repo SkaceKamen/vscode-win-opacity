@@ -26,6 +26,18 @@ npm run rebuild
 
 This rebuilds native modules to be used in electron based applications.
 
+But until the native dependencies are fixed, rebuild requires some manual work before running it. You have to replace:
+
+```
+smth->Set(....)
+```
+with
+```
+Nan::Set(smth, ....)
+```
+
+in all `bindings.cc` and `ffi.cc` files. I know it sucks and I should fork all those native dependencies and fix it myself, but I don't have the courage.
+
 ## Credits
 
 `drywolf` - part of code used to find vscode windows, found [here](https://github.com/drywolf/code-solution-manager/blob/0.0.1/extension-ui/browser.js)

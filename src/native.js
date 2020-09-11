@@ -32,7 +32,7 @@ var windows = [];
 // This callback is called when searching throught all windows
 var windowProc = ffi.Callback('bool', ['long', 'int32'], function (hwnd) {
 	// Load window title
-	var buf = new Buffer(255)
+	var buf = Buffer.alloc(255)
 	user32.GetWindowTextA(hwnd, buf, 255)
 	var window_name = ref.readCString(buf, 0)
 
