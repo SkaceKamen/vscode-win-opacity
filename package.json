@@ -49,8 +49,10 @@
     "vscode": "^1.1.37"
   },
   "dependencies": {
-    "ffi": "github:lxe/node-ffi#node-12",
-    "ref": "github:lxe/ref#node-12"
+    "ffi": "github:SkaceKamen/node-ffi#node-next",
+    "install": "^0.13.0",
+    "ref": "github:SkaceKamen/ref#node-next",
+    "ref-struct": "github:SkaceKamen/ref-struct#node-next"
   },
   "license": "MIT"
 }
