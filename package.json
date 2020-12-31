@@ -2,7 +2,7 @@
   "name": "win-opacity",
   "displayName": "Windows opacity",
   "description": "Changes opacity of Code windows on Windows using Windows API",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "publisher": "skacekachna",
   "author": "Jan Zípek",
   "icon": "images/icon.png",
@@ -29,7 +29,7 @@
           "type": "integer",
           "default": 245,
           "description": "Opacity value. Should be between 0 and 255, where 0 is invisible window",
-          "minimum": 0,
+          "minimum": 40,
           "maximum": 255
         }
       }

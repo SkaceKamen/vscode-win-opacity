@@ -18,13 +18,13 @@ function changeOpacity (opacity) {
   opacity = opacity || getOpacity()
 
   // Check the opacity value to be sure
-  if (typeof opacity !== "number" || opacity < 0 || opacity > 255) {
-    console.error('Opacity value is out of range! Opacity:', opacity)
+  if (typeof opacity !== "number") {
+    console.error('Opacity is not a number! Opacity:', opacity)
     opacity = 255
   }
 
   // Round opacity value to integer
-  opacity = opacity | 0
+  opacity = Math.max(40, Math.min(255, opacity | 0))
 
   // Change the opacity
   native.getCodeWindows().forEach(hwd => {
