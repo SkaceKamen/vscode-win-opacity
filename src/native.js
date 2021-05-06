@@ -5,8 +5,8 @@
  * @source https://github.com/drywolf/code-solution-manager/blob/0.0.1/extension-ui/browser.js
  */
 
-const ref = require('ref')
-const ffi = require('ffi')
+const ref = require('ref-napi')
+const ffi = require('ffi-napi')
 
 const voidPtr = ref.refType(ref.types["void"])
 const stringPtr = ref.refType(ref.types.CString)
