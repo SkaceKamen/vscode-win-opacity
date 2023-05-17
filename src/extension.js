@@ -1,5 +1,5 @@
-var vscode = require('vscode');
-var native = require('./native')
+const vscode = require('vscode');
+const native = require('../build/Release/win_opacity');
 
 /**
  * Loads opacity from configuration.
@@ -27,9 +27,7 @@ function changeOpacity (opacity) {
   opacity = Math.max(40, Math.min(255, opacity | 0))
 
   // Change the opacity
-  native.getCodeWindows().forEach(hwd => {
-    native.setWindowOpacity(hwd, opacity)
-  })
+  native.applyAlpha(opacity);
 }
 
 function activate () {

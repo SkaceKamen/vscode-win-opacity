@@ -2,7 +2,7 @@
   "name": "win-opacity",
   "displayName": "Windows opacity",
   "description": "Changes opacity of Code windows on Windows using Windows API",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "publisher": "skacekachna",
   "author": "Jan Zípek",
   "icon": "images/icon.png",
@@ -39,20 +39,18 @@
     }
   },
   "scripts": {
-    "rebuild": "npm rebuild --runtime=electron --target=22.3.6 --disturl=https://electronjs.org/headers",
-    "package": "vsce package && node build/package.js",
+    "rebuild": "node-gyp build --runtime=electron --target=22.3.9 --disturl=https://electronjs.org/headers",
+    "package": "vsce package",
     "publish": "vsce publish"
   },
   "devDependencies": {
     "@types/node": "^6.0.40",
     "@types/vscode": "^1.40.0",
-    "eslint": "^6.6.0",
-    "glob-fs": "^0.1.7"
+    "eslint": "^6.6.0"
   },
   "dependencies": {
     "@electron/rebuild": "^3.2.12",
     "bindings": "^1.5.0",
-    "ffi-napi": "^4.0.3",
     "install": "^0.13.0",
     "node-addon-api": "^3.1.0",
     "ref-napi": "^3.0.2"
