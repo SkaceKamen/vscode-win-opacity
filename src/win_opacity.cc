@@ -2,10 +2,13 @@
 #include <windows.h>
 #include <vector>
 #include <iostream>
+#include <regex>
 
 namespace win_opacity
 {
   std::vector<HWND> windowsList;
+  std::regex titleRegex("- Visual Studio Code(?: - Insiders)?(?: \\[.*\\])?$",
+                        std::regex_constants::ECMAScript);
 
   void setWindowsOpacity(HWND hwd, BYTE alpha)
   {
@@ -22,7 +25,7 @@ namespace win_opacity
     char *title = (char *)malloc((len + 1) * sizeof(char));
     GetWindowTextA(hWnd, title, len + 1);
 
-    if (strstr(title, " - Visual Studio Code") != NULL)
+    if (std::regex_search(title, titleRegex))
     {
       windowsList.push_back(hWnd);
     }
