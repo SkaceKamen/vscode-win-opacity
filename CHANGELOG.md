@@ -4,6 +4,11 @@ All notable changes to the "win-opacity" extension will be documented in this fi
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [1.1.7] - 2023-05-17
+### Update
+ - Rewritten to raw native code instead of using external packages
+ - Rebuilt for newer version of vscode
+
 ## [1.1.6] - 2023-04-17
 ### Update
  - Rebuilt for newer version of vscode
